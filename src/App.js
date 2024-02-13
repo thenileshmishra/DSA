@@ -1,11 +1,14 @@
 import React from "react";
-import About from "./components/About";
-
+import Home from "./components/Home";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 function App() {
+  const theme = createTheme({});
   return (
-    <div>
-      <About />
-    </div>
+    <ThemeProvider theme={theme}>
+      <div>
+        <Home />
+      </div>
+    </ThemeProvider>
   );
 }
 
