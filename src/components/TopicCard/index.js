@@ -1,7 +1,6 @@
 import React from "react";
 import { Progress } from "antd";
 import { Grid, Card, Typography, CardContent } from "@mui/material";
-import "./topicCard.css";
 import { Link } from "react-router-dom";
 
 function TopicCard({ item }) {
