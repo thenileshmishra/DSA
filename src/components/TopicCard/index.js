@@ -1,14 +1,8 @@
 import React from "react";
 import { Progress } from "antd";
-import {
-  Grid,
-  Card,
-  Typography,
-  CardContent,
-  CardActions,
-  Divider,
-} from "@mui/material";
+import { Grid, Card, Typography, CardContent } from "@mui/material";
 import "./topicCard.css";
+import { Link } from "react-router-dom";
 
 function TopicCard({ item }) {
   return (
@@ -35,61 +29,64 @@ function TopicCard({ item }) {
         },
       }}
     >
-      {/* <Link to={pro ? "/" : route}> */}
-
-      <Card
-        sx={{ minWidth: 275, minHeight: 160 }}
-        style={{
-          background: "#9bc3a9",
-          borderRadius: "15px",
-        }}
+      <Link
+        to={`/${item.topicName.replace(/[^A-Z0-9]+/gi, "_").toLowerCase()}`}
+        style={{ textDecoration: "none" }}
       >
-        <CardContent>
-          <Grid
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              flexDirection: "column",
-              justifyContent: "space-between",
-            }}
-          >
-            <Grid container mb={2} borderBottom={1} color={"white"}>
-              <Grid item sm={12}>
-                <Typography variant="h5" color={"black"}>
-                  {item.topicName}
-                </Typography>
-              </Grid>
-            </Grid>
-
+        <Card
+          sx={{ minWidth: 275, minHeight: 160 }}
+          style={{
+            cursor: "pointer",
+            background: "#9bc3a9",
+            borderRadius: "15px",
+          }}
+        >
+          <CardContent>
             <Grid
-              container
               sx={{
                 display: "flex",
                 alignItems: "center",
+                flexDirection: "column",
                 justifyContent: "space-between",
               }}
             >
-              <Grid item sm={10}>
-                <Typography variant="body2">
-                  {" "}
-                  Total Question: {item.questions.length}
-                </Typography>
-                <Typography variant="body2">
-                  {" "}
-                  Bookmarked: {item.questions.length}
-                </Typography>
-
-                <Typography variant="body2"> Not started yet</Typography>
+              <Grid container mb={2} borderBottom={1} color={"white"}>
+                <Grid item sm={12}>
+                  <Typography variant="h5" color={"black"}>
+                    {item.topicName}
+                  </Typography>
+                </Grid>
               </Grid>
-              <Grid item sm={2}>
-                {" "}
-                <Progress type="circle" percent={90} size={50} />
+
+              <Grid
+                container
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                }}
+              >
+                <Grid item sm={10}>
+                  <Typography variant="body2">
+                    {" "}
+                    Total Question: {item.questions.length}
+                  </Typography>
+                  <Typography variant="body2">
+                    {" "}
+                    Bookmarked: {item.questions.length}
+                  </Typography>
+
+                  <Typography variant="body2"> Not started yet</Typography>
+                </Grid>
+                <Grid item sm={2}>
+                  {" "}
+                  <Progress type="circle" percent={90} size={50} />
+                </Grid>
               </Grid>
             </Grid>
-          </Grid>
-        </CardContent>
-      </Card>
-      {/* </Link> */}
+          </CardContent>
+        </Card>
+      </Link>
     </Grid>
   );
 }
