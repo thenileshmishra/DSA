@@ -11,63 +11,63 @@ const router = createBrowserRouter([
   },
   {
     path: "/array",
-    element: <QuestionCard data={"array"} />,
+    element: <QuestionCard data={"Array"} />,
   },
   {
     path: "/matrix",
-    element: <QuestionCard data={"matrix"} />,
+    element: <QuestionCard data={"Matrix"} />,
   },
   {
     path: "/string",
-    element: <QuestionCard data={"string"} />,
+    element: <QuestionCard data={"String"} />,
   },
   {
     path: "/search_sort",
-    element: <QuestionCard data={"search_sort"} />,
+    element: <QuestionCard data={"Search & Sort"} />,
   },
   {
     path: "/linked_list",
-    element: <QuestionCard data={"linked_list"} />,
+    element: <QuestionCard data={"Linked List"} />,
   },
   {
     path: "/binary_trees",
-    element: <QuestionCard data={"binary_trees"} />,
+    element: <QuestionCard data={"Binary Trees"} />,
   },
   {
     path: "/binary_search_tree",
-    element: <QuestionCard data={"binary_search_tree"} />,
+    element: <QuestionCard data={"BST"} />,
   },
   {
     path: "/greedy",
-    element: <QuestionCard data={"greedy"} />,
+    element: <QuestionCard data={"Greedy"} />,
   },
   {
     path: "/backtracking",
-    element: <QuestionCard data={"backtracking"} />,
+    element: <QuestionCard data={"BackTracking"} />,
   },
   {
     path: "/stacks_queues",
-    element: <QuestionCard data={"stacks_queues"} />,
+    element: <QuestionCard data={"Stacks & Queues"} />,
   },
   {
     path: "/heap",
-    element: <QuestionCard data={"heap"} />,
+    element: <QuestionCard data={"Heap"} />,
   },
   {
     path: "/graph",
-    element: <QuestionCard data={"graph"} />,
+    element: <QuestionCard data={"Graph"} />,
   },
   {
     path: "/trie",
-    element: <QuestionCard data={"trie"} />,
+    element: <QuestionCard data={"Trie"} />,
   },
   {
     path: "/dynamic_programming",
-    element: <QuestionCard data={"dynamic_programming"} />,
+    element: <QuestionCard data={"Dynamic Programming"} />,
   },
   {
     path: "bit_manipulation",
-    element: <QuestionCard data={"bit_manipulation"} />,
+    element: <QuestionCard data={"Bit Manipulation"} />,
   },
 ]);
 function App() {
