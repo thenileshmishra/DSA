@@ -1,6 +1,13 @@
 import React from "react";
-import { Card, Progress } from "antd";
-import { Grid, Typography } from "@mui/material";
+import { Progress } from "antd";
+import {
+  Grid,
+  Card,
+  Typography,
+  CardContent,
+  CardActions,
+  Divider,
+} from "@mui/material";
 import "./topicCard.css";
 
 function TopicCard({ item }) {
@@ -10,9 +17,6 @@ function TopicCard({ item }) {
       xs={12}
       md={4}
       sm={6}
-      bgColor="white"
-      borderRadius="xl"
-      shadow="lg"
       justifyContent="center"
       alignItems="center"
       sx={{ mb: 2 }}
@@ -34,24 +38,56 @@ function TopicCard({ item }) {
       {/* <Link to={pro ? "/" : route}> */}
 
       <Card
-        title={item.topicName}
-        bordered={false}
+        sx={{ minWidth: 275, minHeight: 160 }}
         style={{
-          background: "#00fff1",
+          background: "#fdf492",
+          borderRadius: "15px",
         }}
       >
-        <Grid container>
-          <Grid item sm={9}>
-            <Typography variant="body2">
-              {" "}
-              Total Question: {item.questions.length}
-            </Typography>
+        <CardContent>
+          <Grid
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              flexDirection: "column",
+              justifyContent: "space-between",
+            }}
+          >
+            <Grid container mb={2} borderBottom={1} color={"white"}>
+              <Grid item sm={12}>
+                <Typography variant="h5" color={"black"}>
+                  {item.topicName}
+                </Typography>
+              </Grid>
+            </Grid>
+
+            <Grid
+              container
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+              }}
+            >
+              <Grid item sm={10}>
+                <Typography variant="body2">
+                  {" "}
+                  Total Question: {item.questions.length}
+                </Typography>
+                <Typography variant="body2">
+                  {" "}
+                  Bookmarked: {item.questions.length}
+                </Typography>
+
+                <Typography variant="body2"> Not started yet</Typography>
+              </Grid>
+              <Grid item sm={2}>
+                {" "}
+                <Progress type="circle" percent={90} size={50} />
+              </Grid>
+            </Grid>
           </Grid>
-          <Grid item sm={3}>
-            {" "}
-            <Progress type="circle" percent={90} size={40} />
-          </Grid>
-        </Grid>
+        </CardContent>
       </Card>
       {/* </Link> */}
     </Grid>
