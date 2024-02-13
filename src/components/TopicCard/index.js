@@ -40,7 +40,7 @@ function TopicCard({ item }) {
       <Card
         sx={{ minWidth: 275, minHeight: 160 }}
         style={{
-          background: "#fdf492",
+          background: "#9bc3a9",
           borderRadius: "15px",
         }}
       >
