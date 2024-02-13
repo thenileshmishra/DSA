@@ -17,7 +17,7 @@ export default [
       {
         Topic: "Array",
         Problem: "Find the maximum and minimum element in an array",
-        Done: false,
+        Done: true,
         Bookmark: false,
         Notes: "",
         URL: "https://practice.geeksforgeeks.org/problems/find-minimum-and-maximum-element-in-an-array4428/1",
