@@ -39,8 +39,8 @@ function QuestionCard(props) {
           <Typography
             variant="h4"
             style={{
-              backgroundColor: "#75e7cae0",
               borderRadius: "10px",
+              color: "#ffffff",
               padding: "5px 0px",
               fontFamily: "Space Grotesk",
               fontWeight: "800",
@@ -55,7 +55,7 @@ function QuestionCard(props) {
         <TableContainer component={Paper}>
           <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
             <TableHead>
-              <TableRow style={{ background: "#faa" }}>
+              <TableRow style={{ background: "#808080" }}>
                 <TableCell style={style.header}></TableCell>
                 <TableCell style={style.header}>No</TableCell>
                 <TableCell style={style.header}>Problem</TableCell>

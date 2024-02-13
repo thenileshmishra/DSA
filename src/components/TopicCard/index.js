@@ -36,7 +36,7 @@ function TopicCard({ item }) {
           sx={{ minWidth: 275, minHeight: 160 }}
           style={{
             cursor: "pointer",
-            background: item. "#c0c0c0",
+            background: "#ffffff",
             borderRadius: "15px",
           }}
         >
@@ -49,7 +49,13 @@ function TopicCard({ item }) {
                 justifyContent: "space-between",
               }}
             >
-              <Grid container mb={2} borderBottom={1} color={"white"}>
+              <Grid
+                container
+                mb={2}
+                borderBottom={1}
+                style={{ borderColor: "black" }}
+                color={"white"}
+              >
                 <Grid item sm={12}>
                   <Typography
                     variant="h5"

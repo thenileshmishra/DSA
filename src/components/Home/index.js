@@ -11,15 +11,15 @@ function Home() {
   return (
     <Container>
       <Grid container>
-        <Grid item lg={12} textAlign="center" mx="auto">
-          <Typography variant="h3" color="black" mt={2} mb={1}>
+        <Grid item xs={12} textAlign="center" mx="auto">
+          <Typography variant="h3" color="#ffffff" mt={2} mb={1}>
             LOVE BABBAR
           </Typography>
         </Grid>
-        <Grid item lg={12} textAlign="center" mx="auto">
+        <Grid item xs={12} textAlign="center" mx="auto">
           <Typography
             variant="span"
-            color="black"
+            color="#ffffff"
             mt={2}
             mb={1}
             textAlign={"center"}
@@ -27,8 +27,20 @@ function Home() {
             Total Questions Soved
           </Typography>
         </Grid>
-        <Grid item md={12} style={{ display: isSmOrDown ? "none" : "block" }}>
-          <Progress percent={60} />
+        <Grid
+          item
+          md={12}
+          style={{
+            display: isSmOrDown ? "none" : "block",
+          }}
+        >
+          <Progress
+            percent={60}
+            strokeColor={{
+              "0%": "#108ee9",
+              "100%": "#87d068",
+            }}
+          />
         </Grid>
       </Grid>
       <Grid container justifyContent="center" alignItems="center">

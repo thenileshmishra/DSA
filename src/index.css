@@ -7,12 +7,15 @@ body {
   font-weight: 600;
   font-optical-sizing: auto;
   font-style: normal;
+  background: #2a2929;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+:where(.css-dev-only-do-not-override-1rqnfsa).ant-progress .ant-progress-text {
+  color: aliceblue;
+}
 
 /* 
-	
 #ffffff
 #c0c0c0
 #808080
