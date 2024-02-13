@@ -36,7 +36,7 @@ function TopicCard({ item }) {
           sx={{ minWidth: 275, minHeight: 160 }}
           style={{
             cursor: "pointer",
-            background: "#9bc3a9",
+            background: item. "#c0c0c0",
             borderRadius: "15px",
           }}
         >
@@ -51,7 +51,11 @@ function TopicCard({ item }) {
             >
               <Grid container mb={2} borderBottom={1} color={"white"}>
                 <Grid item sm={12}>
-                  <Typography variant="h5" color={"black"}>
+                  <Typography
+                    variant="h5"
+                    style={{ fontFamily: "Space Grotesk", fontWeight: 600 }}
+                    color={"black"}
+                  >
                     {item.topicName}
                   </Typography>
                 </Grid>
@@ -66,20 +70,33 @@ function TopicCard({ item }) {
                 }}
               >
                 <Grid item sm={10}>
-                  <Typography variant="body2">
+                  <Typography
+                    variant="body2"
+                    style={{
+                      fontFamily: "Space Grotesk",
+                      fontWeight: 500,
+                      fontSize: "17px",
+                    }}
+                  >
                     {" "}
                     Total Question: {item.questions.length}
                   </Typography>
-                  <Typography variant="body2">
-                    {" "}
-                    Bookmarked: {item.questions.length}
-                  </Typography>
 
-                  <Typography variant="body2"> Not started yet</Typography>
+                  <Typography
+                    variant="body2"
+                    style={{
+                      fontFamily: "Space Grotesk",
+                      fontWeight: 400,
+                      fontSize: "17px",
+                    }}
+                  >
+                    {" "}
+                    Not started yet
+                  </Typography>
                 </Grid>
                 <Grid item sm={2}>
                   {" "}
-                  <Progress type="circle" percent={90} size={50} />
+                  <Progress type="circle" percent={90} size={70} />
                 </Grid>
               </Grid>
             </Grid>
