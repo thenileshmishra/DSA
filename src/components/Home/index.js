@@ -13,7 +13,7 @@ function Home() {
       <Grid container>
         <Grid item xs={12} textAlign="center" mx="auto">
           <Typography variant="h3" color="#ffffff" mt={2} mb={1}>
-            LOVE BABBAR
+            450 DSA
           </Typography>
         </Grid>
         <Grid item xs={12} textAlign="center" mx="auto">

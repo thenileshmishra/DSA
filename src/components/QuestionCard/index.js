@@ -107,6 +107,7 @@ function QuestionCard(props) {
                     }}
                   >
                     <IconButton aria-label="bookmark">
+                      {" "}
                       <a
                         href={row.URL}
                         target="_blank"
@@ -114,13 +115,12 @@ function QuestionCard(props) {
                       >
                         <img
                           style={{ height: "30px", width: "30px" }}
-                          src={cn}
-                          alt="cn"
+                          src={gfg}
+                          alt="gfg"
                         />
                       </a>
                     </IconButton>
                     <IconButton aria-label="bookmark">
-                      {" "}
                       <a
                         href={row.URL2}
                         target="_blank"
@@ -128,8 +128,8 @@ function QuestionCard(props) {
                       >
                         <img
                           style={{ height: "30px", width: "30px" }}
-                          src={gfg}
-                          alt="gfg"
+                          src={cn}
+                          alt="cn"
                         />
                       </a>
                     </IconButton>
