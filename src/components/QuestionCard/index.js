@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import problems from "../../DSA450";
+import { useNavigate } from "react-router-dom";
 import {
   Table,
   TableBody,
@@ -12,6 +13,7 @@ import {
   Container,
   Grid,
   Typography,
+  Link,
 } from "@mui/material";
 
 import CheckIcon from "@mui/icons-material/Check";
@@ -22,6 +24,8 @@ import gfg from "../../assests/gfg-gg-logo.svg";
 
 function QuestionCard(props) {
   const [questions, setQuestions] = useState([]);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const filteredQuestions = problems.find(
@@ -36,19 +40,24 @@ function QuestionCard(props) {
     <Container style={{ marginTop: "10px" }}>
       <Grid Container>
         <Grid item xs={12} mb={2}>
-          <Typography
-            variant="h4"
-            style={{
-              borderRadius: "10px",
-              color: "#ffffff",
-              padding: "5px 0px",
-              fontFamily: "Space Grotesk",
-              fontWeight: "800",
-            }}
-            textAlign={"center"}
-          >
-            {props.data}
-          </Typography>
+          <Link to="/">
+            <Typography
+              variant="h4"
+              onClick={() => navigate(-1)}
+              style={{
+                borderRadius: "10px",
+                color: "#ffffff",
+                cursor: "pointer",
+                textDecoration: "none",
+                padding: "5px 0px",
+                fontFamily: "Space Grotesk",
+                fontWeight: "800",
+              }}
+              textAlign={"center"}
+            >
+              {props.data}
+            </Typography>
+          </Link>
         </Grid>
       </Grid>
       {questions.length && (

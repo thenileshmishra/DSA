@@ -102,7 +102,7 @@ function TopicCard({ item }) {
                 </Grid>
                 <Grid item sm={2}>
                   {" "}
-                  <Progress type="circle" percent={90} size={70} />
+                  <Progress type="circle" percent={100} size={70} />
                 </Grid>
               </Grid>
             </Grid>
